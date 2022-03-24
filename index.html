@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleIndex.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <title>Formulario de empresas</title>
+    
+</head>
+<header>
+    <nav id="menu">
+        <a href="index.html"><img id="github" src="assets/icons8-github.svg"></img></a>
+        <a href="index.html"><img id="linkedin" src="assets/icons8-linkedin.svg"></img></a>
+        <a href="index.html"><img id="telegram" src="https://img.icons8.com/ios/50/000000/telegram-app.png"></img></a>
+        <input type="search" id="pesquisar">               
+        <button id="btCadastros"><a href="companies.html">Cadastros</a></button>
+    </nav>    
+</header>
+<body>
+    <h1>Informações Gerais</h1>
+    <form id="formu" method="post" enctype="multipart/form-data">
+        
+        <div id="btPhoto"> 
+            
+            <label for="photo" id="photoL">Escolher uma foto</label>
+            <input type="file" id="photo" name="photo">
+            <p>Carregue uma imagem no formato JPG, PNG, JPGE ou Gif de no maximo 5Mb</p>
+        </div>
+
+        <label for="name">Nome da Instituição/ ONG/ Associação</label>
+        <input type="text" id="name" class="verification" name="name" placeholder="UPA - Unidos Pró Alan"/>
+
+        <label for="abstract">Resumo das Atividades</label>
+        <textarea type="text" id="abstract" class="verification" name="abstract" placeholder="Resumo das atividades e conceitos da empresa, associação ou ONG"></textarea>
+       
+        <div id="baixo">
+            <div id="esq">
+                <label for="cnpj">CNPJ</label>
+                <input type="text" id="cnpj" class="verification" name="cnpj" placeholder="36.858.982/0001-65" />
+
+                <label for="incm">Inscrição Municipal de Entidades</label>
+                <input type="text" id="incm" class="verification" name="insc_mun" placeholder="00.000.000/52"/>                
+            
+                <label for="ince">Inscrição Estadual de Entidades</label>
+                <input type="text" id="ince" class="verification" name="insc_est" placeholder="0000/0000"/>
+            </div>
+            
+            <div id="dir">               
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" class="verification" name="adress" placeholder="Rua: João de Melo, 58 - Tucuruvi, SP"/>
+                
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complement" placeholder="Casa 02"/>
+
+                <label for="causas">Causas</label>
+                <input type="text" id="causas" name="causes" placeholder="Selecione uma causa"/>
+            </div>
+        </div>
+
+        <h1>Contato</h1>        
+        
+        <div id="baixo">
+            <div id="esq">
+                <label for="director">Diretor(a) Responsavel</label>                                                
+                <input type="text" id="director" class="verification" name="director" placeholder="José Alencar junior"/>
+
+                <label for="email">E-mail Institucional</label>
+                <input type="email" id="email" class="verification" name="email" placeholder="contato@empresa.com.br"/>               
+                
+                <label for="phone">Telefone Institucional</label>
+                <input type="text" id="phone" class="verification" name="phone" placeholder="(11) 4796-5825"/>
+                    
+            </div>
+            
+            <div id="dir">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" placeholder="https://empresa.com.br"/>
+                
+                
+                <label for="facebook">Facebook</label>
+                <input type="text" id="facebook" name="facebook" placeholder="https://facebook.com/empresa"/>
+                
+                
+                <label for="instagram">Instagram</label>                                                
+                <input type="text" id="instagram" name="instagram" placeholder="https://instagram.com/empresa"/>    
+            </div>
+        </div>
+            
+        <div id="btcreate">
+            <button type="submit" id="create">Cadastrar</button>
+        </div>
+        
+    </form>
+   
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script src="validations/validateCnpj.js"></script>
+<script src="script.js"></script>
+
+</html>
