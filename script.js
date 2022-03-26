@@ -1,6 +1,7 @@
 
 $("#phone").mask("(00) 0000-0000");
 $('#cnpj').mask('00.000.000/0000-00');
+$('#pesquisar').mask('00.000.000/0000-00');
 
     function readImage () {
         if (this.files && this.files[0]) {
@@ -89,3 +90,7 @@ const validateEmail = (email) => {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
+
+
+  // Pegando todos os dados
+
