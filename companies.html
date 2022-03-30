@@ -15,86 +15,23 @@
 <header>
     <nav id="menu">
         <button id="home"><a id="homeA" href="index.html">Inicio</a></button>
-        <a href="index.html"><img id="github" src="assets/icons8-github.svg"></img></a>
-        <a href="index.html"><img id="linkedin" src="assets/icons8-linkedin.svg"></img></a>
-        <a href="index.html"><img id="telegram" src="https://img.icons8.com/ios/50/000000/telegram-app.png"></img></a>
+        <a href="https://github.com/AlanDouglasASouza"><img id="github" src="https://img.icons8.com/fluency-systems-regular/48/000000/github.png"></img></a>
+        <a href="https://www.linkedin.com/in/alan-douglas-artigas-souza"><img id="linkedin" src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"></img></a>
+        <a href="https://t.me/alanDouglasASouza"><img id="telegram" src="https://img.icons8.com/ios/50/000000/telegram-app.png"></img></a>
         <input type="search" id="pesquisar" placeholder="Pesquisar por CNPJ">
-        <button id="searchBt" type="submit">
+        <button id="searchBt" onclick="search()">
             <img id="search"src="https://img.icons8.com/ios/50/000000/search--v1.png"/>
         </button>         
-        <button id="btCadastros" onclick="allCompanies()"><a>Cadastros</a></button>
+        <button id="btCadastros"><a href="companies.html">Cadastros</a></button>
     </nav>    
 </header>
 <body>
     <div id="bod">
-        <h1 id="iu">Os registros aparecerão aqui</h1>
-        <div id="company">
-            <div id="geral">
-            <div id="dir">
-            <table id="tabela">
-                <caption>Nome da Empresa</caption>
-                
-                <tr><td class="ce">Tela</td><td class="cd">Resolução </td></tr>
-                <tr><td class="ce">CNPJ</td><td class="cd">5MP para fotos</td></tr>
-                <tr><td class="ce">Inscrição Estadual</td><td class="cd">000/000/00</td></tr>
-                <tr><td class="ce">Inscrição Municipal</td><td class="cd">Wi-Fi</td></tr>
-                <tr><td class="ce">Bluetooth</td><td class="cd">12GB</td></tr>
-                <tr><td class="ce">Memória Interna</td> <td class="cd">12GB</td></tr>
-                </table>
-            </div>
-            <div id="esq">
-                <table id="tabela">
-                    <caption>Nome da Empresa</caption>
-                    
-                    <tr><td class="ce">Tela</td><td class="cd">Resolução </td></tr>
-                    <tr><td class="ce">CNPJ</td><td class="cd">5MP para fotos</td></tr>
-                    <tr><td class="ce">Inscrição Estadual</td><td class="cd">000/000/00</td></tr>
-                    <tr><td class="ce">Inscrição Municipal</td><td class="cd">Wi-Fi</td></tr>
-                    <tr><td class="ce">Bluetooth</td><td class="cd">12GB</td></tr>
-                    <tr><td class="ce">Memória Interna</td> <td class="cd">12GB</td></tr>
-                    </table>
-                </div>
-            </div>           
-        </div>    
+        <h1 id="iu">Todos os Cadastros</h1>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script src="validations/validateCnpj.js"></script>
 
-<script>
-    const allCompanies = async () => {   
-    try {        
-        const resul = await fetch('http://localhost:8080/home/company-inf');
-        const data = await resul.json();       
-        show(data);
-    } catch (err) {
-            console.log('Deu Ruim: ' + err);
-        }
-    }
-    const div = document.getElementById('company');
-    const show = (dt) => {        
-        console.log(dt);
-        dt.map(function(author) {
-        let p = createNode('p');
-        let p1 = createNode('p');
-        let img = createNode('img');
-        let span = createNode('span');        
-        p.innerHTML = `Nome: ${author.name}`;
-        p1.innerHTML = `CNPJ: ${author.companies_information.cnpj}`;       
-        append(div, p);
-        append(div, p1);
-    })
-
-    }
-
-    // Teste de dinamismo
-
-function createNode(element) {
-    return document.createElement(element);
-}
-
-function append(parent, el) {
-  return parent.appendChild(el);
-}
-</script>
+<script src="companiesScript.js"></script>

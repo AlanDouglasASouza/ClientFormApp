@@ -19,13 +19,13 @@ div#company {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
-  height: 400px;
-  border-style: solid;
-  border-width: 2px;
+  margin-bottom: 25px;
+  width: 904px;
+  height: auto;
+  border: 2px solid rgb(212, 211, 211);
   border-radius: 5px;
-  border-color: rgb(212, 211, 211);
   padding: 5px;
+  padding-bottom: 20px;
 }
 
 p {
@@ -38,38 +38,57 @@ p {
 
 div#geral {
   display: inline;
+  margin-left: 25px;
+}
+
+div#esq {
+  height: 289px;
+  width: 330px;
+  margin-top: 20px;
+  border: 2px solid rgb(212, 211, 211);
+  background-size: 330px 289px;
+}
+
+div.dowm {
+  margin-top: 30px;
+  margin-left: 25px;
 }
 
 /*Formatação da tabela*/
 table#tabela {
-  border: 1px solid #606060;
   border-spacing: 0px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 table#tabela td {
-  border: 1px solid #606060;
   padding: 10px;
   text-align: center;
   vertical-align: middle;
 }
 
 table#tabela td.ce {
-  background-color: #606060;
-  color: #ffffff;
+  width: 170px;
+  background-color: #ffffff;
+  color: #606060;
   vertical-align: top;
-  text-align: right;
   font-weight: bold;
+  border: 2px solid rgb(212, 211, 211);
+  border-radius: 5px;
 }
 
 table#tabela td.cd {
+  width: 200px;
+  border: 2px solid rgb(212, 211, 211);
   text-align: left;
-  background-color: #cecece;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #606060;
 }
 
-table#tabela caption {
-  color: #888888;
-  font-size: 13pt;
-  font-weight: bold;
+table#tabela td.cdd {
+  width: 77%;
+  border: 2px solid rgb(212, 211, 211);
+  text-align: left;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #606060;
 }

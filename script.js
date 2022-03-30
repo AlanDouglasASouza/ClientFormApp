@@ -1,8 +1,9 @@
-
+// Mascaras dos inputs
 $("#phone").mask("(00) 0000-0000");
 $('#cnpj').mask('00.000.000/0000-00');
 $('#pesquisar').mask('00.000.000/0000-00');
 
+    // Mostrar um preview da foto escolhida no cadastro
     function readImage () {
         if (this.files && this.files[0]) {
             var file = new FileReader();
@@ -15,8 +16,15 @@ $('#pesquisar').mask('00.000.000/0000-00');
 
     document.getElementById("photo").addEventListener("change", readImage, false);    
 
-    // Testando o baguiu
+    
+    // Levar para a page de pesquisar passando parametro por URL
+    const search = () => {
+        const p = document.getElementById('pesquisar').value;      
+        location.href = `search.html?cnpj=${p}`
+        
+    } 
    
+    // Envia o formulário para API fazendo as validações
     window.onload = () => {
     var form = document.getElementById('formu');
     const inputs = document.getElementsByClassName("verification")
@@ -50,13 +58,13 @@ $('#pesquisar').mask('00.000.000/0000-00');
     }});
 }
 
+// Validações do inputs dos formularios
 const verificationNull = (ver, err) => {
     var result = false;
 
     for (const verif of ver ){
         if (verif.value === ''){
-            verif.style = 'border-color: red';
-            //verif.style = '::-webkit-input-placeholder {color: red}';   
+            verif.style = 'border-color: red';               
             verif.placeholder = '***Campo Obrigatorio***';                  
             result = true;           
         }
@@ -90,7 +98,3 @@ const validateEmail = (email) => {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
-
-
-  // Pegando todos os dados
-
