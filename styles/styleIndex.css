@@ -155,13 +155,8 @@ button#create {
 header {
   margin-top: -7px;
   margin-left: -8px;
-  width: 101%;
+  width: auto;
   height: 50px;
-  /*border-style: solid;
-  border-width: 2px;
-  border-top: none;
-  border-left: none;
-  border-right: none;*/
   border-color: rgb(212, 211, 211);
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.33);
   -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.33);
@@ -169,36 +164,93 @@ header {
   background-color: #f1f2f5;
 }
 
-header img {
+nav {
   position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* centraliza na vertical */
+  align-items: center;
+}
+
+#home {
+  position: relative;
+  width: 100px;
+  height: 35px;
+  bottom: 5px;
+  left: 5px;
+  font-size: 18pt;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: black;
+  border-radius: 4px;
+  background-color: none;
+  font-family: "Comfortaa";
+  font-style: normal;
   cursor: pointer;
 }
 
-/*img#github {
-  height: 35px;
-  width: 35px;
+#home:hover {
+  background-color: rgb(20, 20, 20);
 }
 
-img#linkedin {
+#homeA {
+  color: black;
+}
+
+#homeA:hover {
+  color: aliceblue;
+}
+
+header img {
+  position: relative;
+  bottom: 4px;
+  cursor: pointer;
   height: 35px;
   width: 35px;
-}*/
+  padding-left: 15px;
+}
 
 input#pesquisar {
-  position: absolute;
+  position: relative;
+  height: 33px;
   top: 2px;
-  left: 30%;
+  left: 16%;
   width: 370px;
+  border-radius: 4px 0px 0px 4px;
+}
+
+#searchBt {
+  height: 33px;
+  width: 50px;
+  left: 16%;
+  bottom: 6px;
+  position: relative;
+  align-items: center;
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0px 4px 4px 0px;
+  border-color: rgb(212, 211, 211);
+}
+
+#search {
+  top: 0px;
+  right: 12px;
+  height: 30px;
+  width: 30px;
 }
 
 /* Aqui ja faz parte do Botão dos cadastros*/
 button#btCadastros {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   width: 150px;
   height: 35px;
-  left: 60%;
+  left: 30%;
+  bottom: 5px;
   font-size: 18pt;
   border: none;
   border-radius: 4px;

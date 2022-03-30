@@ -13,10 +13,14 @@
 </head>
 <header>
     <nav id="menu">
-        <a href="index.html"><img id="github" src="assets/icons8-github.svg"></img></a>
-        <a href="index.html"><img id="linkedin" src="assets/icons8-linkedin.svg"></img></a>
-        <a href="index.html"><img id="telegram" src="https://img.icons8.com/ios/50/000000/telegram-app.png"></img></a>
-        <input type="search" id="pesquisar">               
+        <button id="home"><a id="homeA" href="index.html">Inicio</a></button>
+        <a href="https://github.com/AlanDouglasASouza"><img id="github" src="https://img.icons8.com/fluency-systems-regular/48/000000/github.png"></img></a>
+        <a href="https://www.linkedin.com/in/alan-douglas-artigas-souza"><img id="linkedin" src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"></img></a>
+        <a href="https://t.me/alanDouglasASouza"><img id="telegram" src="https://img.icons8.com/ios/50/000000/telegram-app.png"></img></a>
+        <input type="search" id="pesquisar" placeholder="Pesquisar por CNPJ">
+        <button id="searchBt" onclick="search()">            
+            <img id="search"src="https://img.icons8.com/ios/50/000000/search--v1.png"/>
+        </button>         
         <button id="btCadastros"><a href="companies.html">Cadastros</a></button>
     </nav>    
 </header>
@@ -24,7 +28,7 @@
     <h1>Informações Gerais</h1>
     <form id="formu" method="post" enctype="multipart/form-data">
         
-        <div id="btPhoto"> 
+        <div id="btPhoto">
             
             <label for="photo" id="photoL">Escolher uma foto</label>
             <input type="file" id="photo" name="photo">

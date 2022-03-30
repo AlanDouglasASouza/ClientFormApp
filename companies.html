@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleIndex.css"/>
     <link rel="stylesheet" href="styles/companiesStyle.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +13,25 @@
     
 </head>
 <header>
-    
+    <nav id="menu">
+        <button id="home"><a id="homeA" href="index.html">Inicio</a></button>
+        <a href="https://github.com/AlanDouglasASouza"><img id="github" src="https://img.icons8.com/fluency-systems-regular/48/000000/github.png"></img></a>
+        <a href="https://www.linkedin.com/in/alan-douglas-artigas-souza"><img id="linkedin" src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"></img></a>
+        <a href="https://t.me/alanDouglasASouza"><img id="telegram" src="https://img.icons8.com/ios/50/000000/telegram-app.png"></img></a>
+        <input type="search" id="pesquisar" placeholder="Pesquisar por CNPJ">
+        <button id="searchBt" onclick="search()">
+            <img id="search"src="https://img.icons8.com/ios/50/000000/search--v1.png"/>
+        </button>         
+        <button id="btCadastros"><a href="companies.html">Cadastros</a></button>
+    </nav>    
 </header>
 <body>
-    <h1>Os registros aparecerão aqui</h1>
+    <div id="bod">
+        <h1 id="iu">Todos os Cadastros</h1>
+    </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script src="validations/validateCnpj.js"></script>
+
+<script src="companiesScript.js"></script>

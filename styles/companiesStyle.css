@@ -1,4 +1,4 @@
-body {
+/*body {
   background-color: #e5e5e5;
   width: 100%;
 }
@@ -11,10 +11,84 @@ h1 {
   text-align: center;
   padding: 20px;
 }
+div#bod {
+  width: 100%;
+}*/
+
+div#company {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  width: 904px;
+  height: auto;
+  border: 2px solid rgb(212, 211, 211);
+  border-radius: 5px;
+  padding: 5px;
+  padding-bottom: 20px;
+}
 
 p {
-  margin-top: 229px;
-  color: rgb(29, 30, 31);
+  position: relative;
+  text-align: left;
+  color: rgb(8, 8, 8);
+  font-size: 20pt;
+  margin: 0;
+}
+
+div#geral {
+  display: inline;
+  margin-left: 25px;
+}
+
+div#esq {
+  height: 289px;
+  width: 330px;
+  margin-top: 20px;
+  border: 2px solid rgb(212, 211, 211);
+  background-size: 330px 289px;
+}
+
+div.dowm {
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+/*Formatação da tabela*/
+table#tabela {
+  border-spacing: 0px;
+}
+
+table#tabela td {
+  padding: 10px;
   text-align: center;
-  font-size: 9pt;
+  vertical-align: middle;
+}
+
+table#tabela td.ce {
+  width: 170px;
+  background-color: #ffffff;
+  color: #606060;
+  vertical-align: top;
+  font-weight: bold;
+  border: 2px solid rgb(212, 211, 211);
+  border-radius: 5px;
+}
+
+table#tabela td.cd {
+  width: 200px;
+  border: 2px solid rgb(212, 211, 211);
+  text-align: left;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #606060;
+}
+
+table#tabela td.cdd {
+  width: 77%;
+  border: 2px solid rgb(212, 211, 211);
+  text-align: left;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #606060;
 }
