@@ -3,31 +3,30 @@ $("#phone").mask("(00) 0000-0000");
 $('#cnpj').mask('00.000.000/0000-00');
 $('#pesquisar').mask('00.000.000/0000-00');
 
-    // Mostrar um preview da foto escolhida no cadastro
-    function readImage () {
-        if (this.files && this.files[0]) {
-            var file = new FileReader();
-            file.onload = function(e) {
-                document.getElementById("btPhoto").style = `background-image: url(${e.target.result})`;
-            };       
-            file.readAsDataURL(this.files[0]);
-        }
+// Mostrar um preview da foto escolhida no cadastro
+function readImage () {
+    if (this.files && this.files[0]) {
+        var file = new FileReader();
+        file.onload = function(e) {
+            document.getElementById("btPhoto").style = `background-image: url(${e.target.result})`;
+        };       
+        file.readAsDataURL(this.files[0]);
     }
+}
 
-    document.getElementById("photo").addEventListener("change", readImage, false);    
+document.getElementById("photo").addEventListener("change", readImage, false);
 
+// Levar para a page de pesquisar passando parametro por URL
+const search = () => {
+    const p = document.getElementById('pesquisar').value;      
+    location.href = `search.html?cnpj=${p}`;
     
-    // Levar para a page de pesquisar passando parametro por URL
-    const search = () => {
-        const p = document.getElementById('pesquisar').value;      
-        location.href = `search.html?cnpj=${p}`
-        
-    } 
+} 
    
-    // Envia o formulário para API fazendo as validações
-    window.onload = () => {
-    var form = document.getElementById('formu');
-    const inputs = document.getElementsByClassName("verification")
+// Envia o formulário para API fazendo as validações
+window.onload = () => {
+    const form = document.getElementById('formu');
+    const inputs = document.getElementsByClassName("verification");
     const cnpj = document.getElementById('cnpj');
     const Email = document.getElementById('email');
 
@@ -44,23 +43,23 @@ $('#pesquisar').mask('00.000.000/0000-00');
            return;
         } else {
                 
-        var myFormData = new FormData(form);
+        const myFormData = new FormData(form);
         fetch('http://localhost:8080/registerCompany', {
             method: 'POST',
             body: myFormData
         }).then((response) => {
-            console.log(response)
+            console.log(response);
             location.reload();
-            alert('Cadastro realizado com sucesso!!')                
+            alert('Cadastro realizado com sucesso!!');              
         }).catch((err) => {
-            console.error(`Erro ao fazer o Post: ${err}`)
+            console.error(`Erro ao fazer o Post: ${err}`);
         });
     }});
 }
 
 // Validações do inputs dos formularios
 const verificationNull = (ver, err) => {
-    var result = false;
+    let result = false;
 
     for (const verif of ver ){
         if (verif.value === ''){
@@ -95,6 +94,6 @@ return true;
 }
 
 const validateEmail = (email) => {
-    var re = /\S+@\S+\.\S+/;
+    let re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
